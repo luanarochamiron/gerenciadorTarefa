@@ -98,15 +98,14 @@ namespace GerenciadorDeTarefas
             return tarefas;
         }
 
-        public string AtualizarTarefa(int id, string campo, string dado)
+        public string AtualizarTarefa(int id, string titulo, string descricao, DateTime dataVencimento, string prioridade, string status)
         {
 
-            string query = $"update Tareset {campo} = '{dado}' where Id = {id}";
+            string query = $"UPDATE Tarefa SET Titulo = '{titulo}', Descricao = '{descricao}', DataVencimento = '{dataVencimento.ToString("yyyy-MM-dd")}', Prioridade = '{prioridade}', Status = '{status.ToLower()}' WHERE Id = {id}";
             MySqlCommand sql = new MySqlCommand(query, conexao);
             string resultado = sql.ExecuteNonQuery() + "Atualizado!";
             return resultado;
         }
-
 
         public List<Tarefa> FiltrarTarefas(string status, string prioridade, string titulo, DateTime? data)
             {

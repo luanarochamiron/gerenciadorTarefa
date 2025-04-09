@@ -43,11 +43,9 @@ namespace GerenciadorDeTarefas
             
             var DAO = new DAO();
 
-           // DAO.AtualizarTarefa(tituloF, descricaoF, dataVencimentoF, prioridadeF, IdTarefaAtualizar);
+            var tarefa = DAO.ObterTarefaPorId(IdTarefaAtualizar);
 
-            var form = new Form1();
-
-            form.ObterTarefasEAtualizarTabelas();
+            DAO.AtualizarTarefa(IdTarefaAtualizar, tituloF, descricaoF, dataVencimentoF, prioridadeF, tarefa.Status);
 
             this.Close();
         }

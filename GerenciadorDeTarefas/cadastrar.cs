@@ -76,10 +76,6 @@ namespace GerenciadorDeTarefas
 
             DAO.Inserir(tituloF, descricaoF, dataVencimentoF, prioridadeF, "fazer");
 
-            var form = new Form1();
-
-            form.ObterTarefasEAtualizarTabelas();
-
             this.Close();
         }
 

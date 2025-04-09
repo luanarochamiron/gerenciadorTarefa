@@ -48,16 +48,17 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Cadastro
             // 
             this.Cadastro.AutoSize = true;
             this.Cadastro.BackColor = System.Drawing.Color.MidnightBlue;
-            this.Cadastro.Font = new System.Drawing.Font("News706 BT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cadastro.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Cadastro.Location = new System.Drawing.Point(-41, 0);
             this.Cadastro.Name = "Cadastro";
-            this.Cadastro.Size = new System.Drawing.Size(882, 57);
+            this.Cadastro.Size = new System.Drawing.Size(908, 55);
             this.Cadastro.TabIndex = 2;
             this.Cadastro.Text = "                         Filtrar                             ";
             // 
