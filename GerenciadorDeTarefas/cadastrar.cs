@@ -18,7 +18,23 @@ namespace GerenciadorDeTarefas
             ArredondarBotao(botaoCadastrar, 50);
             ConfigurarBotao(botaoCadastrar);
             ConfigurarBotaoSair(button1);
+
+            this.FormBorderStyle = FormBorderStyle.None; // Remove borda padrão
+            this.StartPosition = FormStartPosition.CenterParent; // Centraliza
+            this.BackColor = Color.AliceBlue; // Define cor do fundo (ou qualquer cor)
          
+            this.ShowInTaskbar = false; // Oculta da barra de tarefas
+            this.TopMost = true; // Mantém sobre os outros
+
+
+            GraphicsPath path = new GraphicsPath();
+            int raio = 40;
+            path.AddArc(0, 0, raio, raio, 180, 90);
+            path.AddArc(this.Width - raio, 0, raio, raio, 270, 90);
+            path.AddArc(this.Width - raio, this.Height - raio, raio, raio, 0, 90);
+            path.AddArc(0, this.Height - raio, raio, raio, 90, 90);
+            path.CloseAllFigures();
+            this.Region = new Region(path);
 
         }
 

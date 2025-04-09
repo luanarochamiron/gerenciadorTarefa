@@ -47,13 +47,14 @@ namespace GerenciadorDeTarefas
             ConfigurarBotao(buttonConsultar);
             ConfigurarBotao(Filtro);
             ConfigurarBotaoSair(Sair);
-            ArredondarLabel(label1, 30);
+            ArredondarLabel(label4, 30);
             ArredondarLabel(label2, 30);
-            ArredondarLabel(label3, 30);
+            ArredondarLabel(label1, 30);
             ArredondarControle(Fazer, 30);
             ArredondarControle(Fazendo, 30);
             ArredondarControle(Finalizado, 30);
 
+         
         }
 
         private void Criar_Click(object sender, EventArgs e)
@@ -76,14 +77,22 @@ namespace GerenciadorDeTarefas
             botao.Region = new Region(path);
         } // Fim 
 
+       
         private void ArredondarControle(Panel panel, int raio)
         {
             GraphicsPath path = new GraphicsPath();
-            path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(panel.Width - raio, 0, raio, raio, 270, 90);
+
+            // Começa no canto superior esquerdo (linha reta)
+            path.AddLine(0, 0, panel.Width, 0); // Topo reto
+
+            // Canto inferior direito (arco)
             path.AddArc(panel.Width - raio, panel.Height - raio, raio, raio, 0, 90);
+
+            // Canto inferior esquerdo (arco)
             path.AddArc(0, panel.Height - raio, raio, raio, 90, 90);
-            path.CloseAllFigures();
+
+            path.CloseFigure();
+
             panel.Region = new Region(path);
         } //Fim
 
@@ -216,7 +225,7 @@ namespace GerenciadorDeTarefas
 
         private void Fazer_Paint(object sender, PaintEventArgs e)
         {
-
+           
         }
 
         private void Fazendo_Paint(object sender, PaintEventArgs e)
@@ -235,9 +244,10 @@ namespace GerenciadorDeTarefas
             {
                 Width = 210,
                 Height = 210,
-                BackColor = Color.FromArgb(235, 245, 255), // Azul bem clarinho
+                BackColor = Color.FromArgb(235, 245, 255),
                 Margin = new Padding(10),
-                BorderStyle = BorderStyle.FixedSingle
+                BorderStyle = BorderStyle.None,
+                Padding = new Padding(10)
             };
 
             Label titulo = new Label
@@ -281,48 +291,57 @@ namespace GerenciadorDeTarefas
                 TextAlign = ContentAlignment.MiddleCenter
             };
 
+            int raioBorda = 20;
+            int espessuraBorda = 6;
 
-            Label prioridade = new Label
-            {
-                Text = $"Prioridade: {tarefa.Prioridade}",
-                Font = new Font("Segoe UI", 9, FontStyle.Bold),
-                AutoSize = false,
-                Height = 20,
-                Dock = DockStyle.Top,
-               
-                TextAlign = ContentAlignment.MiddleCenter,
-            };
+            Color corBorda;
 
             switch (tarefa.Prioridade.ToLower())
             {
                 case "alta":
-                    prioridade.BackColor = Color.Orange;
-                    prioridade.ForeColor = Color.White;
+                    corBorda = Color.Red;
                     break;
-
                 case "média":
                 case "media":
-                    prioridade.BackColor = Color.Gold;
-                    prioridade.ForeColor = Color.Black;
+                    corBorda = Color.Gold;
                     break;
-
                 case "baixa":
-                    prioridade.BackColor = Color.LightGreen;
-                    prioridade.ForeColor = Color.Black;
+                    corBorda = Color.LightGreen;
                     break;
-
                 default:
-                    prioridade.BackColor = Color.LightGray;
-                    prioridade.ForeColor = Color.Black;
+                    corBorda = Color.LightGray;
                     break;
             }
 
+            card.BorderStyle = BorderStyle.None;
+
+            // Define região arredondada com o tamanho EXATO do painel
+            card.Region = new Region(CreateRoundedPath(card.ClientRectangle, raioBorda));
+
+            // Desenha a borda NO MESMO TAMANHO do painel (sem reduzir com espessura)
+            card.Paint += (s, e) =>
+            {
+                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+
+                Rectangle rect = card.ClientRectangle;
+                rect.Width -= 1;
+                rect.Height -= 1;
+
+                using (GraphicsPath path = CreateRoundedPath(rect, raioBorda))
+                using (Pen pen = new Pen(corBorda, espessuraBorda))
+                {
+                    pen.Alignment = PenAlignment.Inset; // Para a borda não ultrapassar
+                    e.Graphics.DrawPath(pen, path);
+                }
+            };
+
+
             Button moverBtn = new Button
             {
-                Text = "️➡️",
+                Text = "➡️",
                 Font = new Font("Segoe UI Emoji", 12),
                 Dock = DockStyle.Right,
-                Width = 70,
+                Width = 60,
                
               
                 FlatStyle = FlatStyle.Flat,
@@ -359,7 +378,7 @@ namespace GerenciadorDeTarefas
                 Text = "🗑️",
                 Font = new Font("Segoe UI Emoji", 12),
                 Dock = DockStyle.Right,
-                Width = 70,
+                Width = 60,
                
                 
                 FlatStyle = FlatStyle.Flat,
@@ -384,12 +403,12 @@ namespace GerenciadorDeTarefas
 
             Button AtualizarBtn = new Button
             {
-                Text = "️✏️",
+                Text = "️✏",
                 Font = new Font("Segoe UI Emoji", 12),
-                Dock = DockStyle.Right,
-                Width = 70,
-            
-               
+                Dock = DockStyle.Left,
+                Width = 62,
+                
+
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.Transparent
             };
@@ -402,18 +421,75 @@ namespace GerenciadorDeTarefas
                 var atualizar = new atualizar(tarefa.Id);
                 atualizar.ShowDialog();
             };
+            DeixarBotaoRedondo(AtualizarBtn);
+            DeixarBotaoRedondo(moverBtn);
+            DeixarBotaoRedondo(deletarBtn);
+
+
 
 
             card.Controls.Add(AtualizarBtn);
             card.Controls.Add(deletarBtn);
             card.Controls.Add(moverBtn);
-            card.Controls.Add(prioridade);
+           
             card.Controls.Add(descricaoPanel);
             card.Controls.Add(dataVencimento);
             card.Controls.Add(titulo);
 
+        
             return card;
         }
+        private GraphicsPath CreateRoundedPath(Rectangle rect, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            int diameter = radius * 2;
+
+            path.AddArc(rect.X, rect.Y, diameter, diameter, 180, 90); // Top-left
+            path.AddArc(rect.Right - diameter, rect.Y, diameter, diameter, 270, 90); // Top-right
+            path.AddArc(rect.Right - diameter, rect.Bottom - diameter, diameter, diameter, 0, 90); // Bottom-right
+            path.AddArc(rect.X, rect.Bottom - diameter, diameter, diameter, 90, 90); // Bottom-left
+            path.CloseFigure();
+
+            return path;
+        }
+
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeixarBotaoRedondo(Button botao)
+        {
+            int tamanho = Math.Min(botao.Width, botao.Height);
+            GraphicsPath path = new GraphicsPath();
+            path.AddEllipse(0, 0, tamanho, tamanho);
+            botao.Region = new Region(path);
+
+            botao.Paint += (s, e) =>
+            {
+                GraphicsPath ellipsePath = new GraphicsPath();
+                ellipsePath.AddEllipse(0, 0, botao.Width, botao.Height);
+                botao.Region = new Region(ellipsePath);
+            };
+        }
+
+
 
     }
 }
