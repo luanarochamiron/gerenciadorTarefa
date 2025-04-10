@@ -281,6 +281,7 @@ namespace GerenciadorDeTarefas
 
             descricaoPanel.Controls.Add(descricao);
 
+            TimeSpan diferenca = tarefa.DataVencimento.Date - DateTime.Today;
             Label dataVencimento = new Label
             {
                 Text = $"Vence em: {tarefa.DataVencimento.ToString("dd/MM/yyyy")}",
@@ -290,8 +291,23 @@ namespace GerenciadorDeTarefas
                 Dock = DockStyle.Top,
                 TextAlign = ContentAlignment.MiddleCenter
             };
+            // Lógica de destaque por data
+            if (diferenca.TotalDays < 0)
+            {
+                dataVencimento.ForeColor = Color.Red;
+                dataVencimento.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            }
+            else if (diferenca.TotalDays <= 3)
+            {
+                dataVencimento.ForeColor = Color.DarkOrange;
+                dataVencimento.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            }
+            else
+            {
+                dataVencimento.ForeColor = Color.DarkBlue;
+            }
 
-            int raioBorda = 20;
+            int raioBorda = 20;;
             int espessuraBorda = 6;
 
             Color corBorda;
