@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.Crmf;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -13,6 +15,7 @@ namespace GerenciadorDeTarefas
         {
             InitializeComponent();
             ObterTarefasEAtualizarTabelas();
+           
         }
 
         public void ObterTarefasEAtualizarTabelas()
@@ -42,11 +45,11 @@ namespace GerenciadorDeTarefas
         {
            
             ArredondarBotao(Criar, 45);
-            ArredondarBotao(buttonConsultar, 45);
+            
             ArredondarBotao(Filtro, 45);
             ArredondarBotao(Sair, 45);
             ConfigurarBotao(Criar);
-            ConfigurarBotao(buttonConsultar);
+       
             ConfigurarBotao(Filtro);
             ConfigurarBotaoSair(Sair);
             ArredondarLabel(label4, 30);
@@ -56,7 +59,10 @@ namespace GerenciadorDeTarefas
             ArredondarControle(Fazendo, 30);
             ArredondarControle(Finalizado, 30);
 
-         
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void Criar_Click(object sender, EventArgs e)
@@ -436,7 +442,7 @@ namespace GerenciadorDeTarefas
                 Text = "🗑️",
                 Font = new Font("Segoe UI Emoji", 12),
                 Dock = DockStyle.Right,
-                Width = 40,
+                Width = 50,
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.Transparent
             };
@@ -462,7 +468,7 @@ namespace GerenciadorDeTarefas
                 Text = "️✏",
                 Font = new Font("Segoe UI Emoji", 12),
                 Dock = DockStyle.Left,
-                Width = 40,
+                Width = 50,
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.Transparent,
             };
@@ -548,6 +554,15 @@ namespace GerenciadorDeTarefas
                 ellipsePath.AddEllipse(0, 0, botao.Width, botao.Height);
                 botao.Region = new Region(ellipsePath);
             };
+        }
+
+        private void relatorio_Click(object sender, EventArgs e)
+        {
+            DAO dao = new DAO();
+            List<Tarefa> tarefas = dao.FiltrarTarefas("Todos", "Todas", "", null);
+
+            FormRelatorio formRelatorio = new FormRelatorio(tarefas);
+            formRelatorio.ShowDialog(); // ShowDialog para abrir como modal
         }
     }
 }

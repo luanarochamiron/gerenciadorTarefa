@@ -10,6 +10,58 @@ namespace GerenciadorDeTarefas
         public cadastrar()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None; // Remove a borda padrão
+            this.StartPosition = FormStartPosition.CenterParent; // Centraliza
+            this.BackColor = Color.AliceBlue; // Cor de fundo
+
+            this.ShowInTaskbar = false; // Oculta da barra de tarefas
+            this.TopMost = true; // Mantém sobre os outros
+
+            this.Padding = new Padding(2); // Espaço para a borda
+            this.Resize += (s, e) => ArredondarJanela(); // Atualiza região ao redimensionar
+
+        }
+
+
+
+
+
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            // Desenha a borda preta
+            using (Pen borda = new Pen(Color.Black, 2))
+            {
+                int raio = 40;
+                GraphicsPath path = new GraphicsPath();
+                path.StartFigure();
+                path.AddArc(0, 0, raio, raio, 180, 90);
+                path.AddArc(this.Width - raio, 0, raio, raio, 270, 90);
+                path.AddArc(this.Width - raio, this.Height - raio, raio, raio, 0, 90);
+                path.AddArc(0, this.Height - raio, raio, raio, 90, 90);
+                path.CloseAllFigures();
+
+                e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                e.Graphics.DrawPath(borda, path);
+            }
+
+        }
+
+
+        private void ArredondarJanela()
+        {
+            int raio = 40;
+            GraphicsPath path = new GraphicsPath();
+            path.StartFigure();
+            path.AddArc(0, 0, raio, raio, 180, 90);
+            path.AddArc(this.Width - raio, 0, raio, raio, 270, 90);
+            path.AddArc(this.Width - raio, this.Height - raio, raio, raio, 0, 90);
+            path.AddArc(0, this.Height - raio, raio, raio, 90, 90);
+            path.CloseAllFigures();
+            this.Region = new Region(path);
+            this.Invalidate(); // Redesenha o formulário
         }
 
         private void cadastrar_Load(object sender, EventArgs e)
@@ -19,22 +71,6 @@ namespace GerenciadorDeTarefas
             ConfigurarBotao(botaoCadastrar);
             ConfigurarBotaoSair(button1);
 
-            this.FormBorderStyle = FormBorderStyle.None; // Remove borda padrão
-            this.StartPosition = FormStartPosition.CenterParent; // Centraliza
-            this.BackColor = Color.AliceBlue; // Define cor do fundo (ou qualquer cor)
-         
-            this.ShowInTaskbar = false; // Oculta da barra de tarefas
-            this.TopMost = true; // Mantém sobre os outros
-
-
-            GraphicsPath path = new GraphicsPath();
-            int raio = 40;
-            path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(this.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(this.Width - raio, this.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, this.Height - raio, raio, raio, 90, 90);
-            path.CloseAllFigures();
-            this.Region = new Region(path);
 
         }
 
