@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace GerenciadorDeTarefas
 {
@@ -15,11 +17,11 @@ namespace GerenciadorDeTarefas
 
         public void ObterTarefasEAtualizarTabelas()
         {
-                DAO dao = new DAO();
+            DAO dao = new DAO();
 
-            var tarefasAFazer = dao.ObterTarefasPorStatus("fazer");
-            var tarefasFazendo = dao.ObterTarefasPorStatus("fazendo");
-            var tarefasFeito = dao.ObterTarefasPorStatus("feito");
+            var tarefasAFazer = dao.ObterTarefasPorStatus("fazer").OrderBy(t => t.DataVencimento).ThenBy(t => t.Prioridade).ToList();
+            var tarefasFazendo = dao.ObterTarefasPorStatus("fazendo").OrderBy(t => t.DataVencimento).ThenBy(t => t.Prioridade).ToList();
+            var tarefasFeito = dao.ObterTarefasPorStatus("feito").OrderBy(t => t.DataVencimento).ThenBy(t => t.Prioridade).ToList();
 
             Fazer.Controls.Clear();
             Fazendo.Controls.Clear();
@@ -60,8 +62,13 @@ namespace GerenciadorDeTarefas
         private void Criar_Click(object sender, EventArgs e)
         {
             var cadastrar = new cadastrar();
+            cadastrar.FormClosed += Cadastrar_FormClosed;
             cadastrar.ShowDialog();
+        }
 
+        private void Cadastrar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ObterTarefasEAtualizarTabelas();
         }
 
         //  ===================================     Aparencias do form     ================================================
@@ -291,7 +298,7 @@ namespace GerenciadorDeTarefas
                 Dock = DockStyle.Top,
                 TextAlign = ContentAlignment.MiddleCenter
             };
-            // Lógica de destaque por data
+            
             if (diferenca.TotalDays < 0)
             {
                 dataVencimento.ForeColor = Color.Red;
@@ -318,7 +325,7 @@ namespace GerenciadorDeTarefas
                     corBorda = Color.Red;
                     break;
                 case "média":
-                case "media":
+     
                     corBorda = Color.Gold;
                     break;
                 case "baixa":
@@ -351,23 +358,20 @@ namespace GerenciadorDeTarefas
                 }
             };
 
-
-            Button moverBtn = new Button
+            Button moverDireitaBtn = new Button
             {
                 Text = "➡️",
                 Font = new Font("Segoe UI Emoji", 12),
                 Dock = DockStyle.Right,
-                Width = 60,
-               
-              
+                Width = 40,
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.Transparent
             };
 
-            moverBtn.Click += (s, e) =>
+            moverDireitaBtn.Click += (s, e) =>
             {
                 DAO dao = new DAO();
-                string novoStatus;
+                string novoStatus = tarefa.Status;
 
                 switch (tarefa.Status)
                 {
@@ -377,32 +381,68 @@ namespace GerenciadorDeTarefas
                     case "fazendo":
                         novoStatus = "feito";
                         break;
+                    // "feito" não avança mais
                     default:
-                        novoStatus = "fazer";
-                        break;
+                        return; // não faz nada
                 }
 
                 dao.AtualizarStatusTarefa(tarefa.Id, novoStatus);
                 ObterTarefasEAtualizarTabelas();
             };
-            moverBtn.FlatAppearance.BorderSize = 0;
-            moverBtn.FlatAppearance.MouseOverBackColor = Color.Plum;
-            moverBtn.FlatAppearance.MouseDownBackColor = Color.MediumPurple;
+
+            moverDireitaBtn.FlatAppearance.BorderSize = 0;
+            moverDireitaBtn.FlatAppearance.MouseOverBackColor = Color.Plum;
+            moverDireitaBtn.FlatAppearance.MouseDownBackColor = Color.MediumPurple;
+
+            Button moverEsquerdaBtn = new Button
+            {
+                Text = "⬅️",
+                Font = new Font("Segoe UI Emoji", 12),
+                Dock = DockStyle.Left,
+                Width = 40,
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.Transparent
+            };
+
+            moverEsquerdaBtn.Click += (s, e) =>
+            {
+                DAO dao = new DAO();
+                string novoStatus = tarefa.Status;
+
+                switch (tarefa.Status)
+                {
+                    case "fazendo":
+                        novoStatus = "fazer";
+                        break;
+                    case "feito":
+                        novoStatus = "fazendo";
+                        break;
+                    // "fazer" não volta mais
+                    default:
+                        return; // não faz nada
+                }
+
+                dao.AtualizarStatusTarefa(tarefa.Id, novoStatus);
+                ObterTarefasEAtualizarTabelas();
+            };
+
+            moverEsquerdaBtn.FlatAppearance.BorderSize = 0;
+            moverEsquerdaBtn.FlatAppearance.MouseOverBackColor = Color.Plum;
+            moverEsquerdaBtn.FlatAppearance.MouseDownBackColor = Color.MediumPurple;
+
 
             Button deletarBtn = new Button
             {
                 Text = "🗑️",
                 Font = new Font("Segoe UI Emoji", 12),
                 Dock = DockStyle.Right,
-                Width = 60,
-               
-                
+                Width = 40,
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.Transparent
-
             };
+
             deletarBtn.FlatAppearance.BorderSize = 0;
-            deletarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 80, 80);  // Vermelho claro
+            deletarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 80, 80); 
             deletarBtn.FlatAppearance.MouseDownBackColor = Color.Red;
 
             deletarBtn.Click += (s, e) =>
@@ -422,12 +462,11 @@ namespace GerenciadorDeTarefas
                 Text = "️✏",
                 Font = new Font("Segoe UI Emoji", 12),
                 Dock = DockStyle.Left,
-                Width = 62,
-                
-
+                Width = 40,
                 FlatStyle = FlatStyle.Flat,
-                BackColor = Color.Transparent
+                BackColor = Color.Transparent,
             };
+
             AtualizarBtn.FlatAppearance.BorderSize = 0;
             AtualizarBtn.FlatAppearance.MouseOverBackColor = Color.LightSkyBlue;
             AtualizarBtn.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
@@ -435,26 +474,32 @@ namespace GerenciadorDeTarefas
             AtualizarBtn.Click += (s, e) =>
             {
                 var atualizar = new atualizar(tarefa.Id);
+                atualizar.FormClosed += Atualizar_FormClosed;
                 atualizar.ShowDialog();
             };
+
             DeixarBotaoRedondo(AtualizarBtn);
-            DeixarBotaoRedondo(moverBtn);
+            DeixarBotaoRedondo(moverEsquerdaBtn);
+            DeixarBotaoRedondo(moverDireitaBtn);
             DeixarBotaoRedondo(deletarBtn);
 
-
-
-
             card.Controls.Add(AtualizarBtn);
+            card.Controls.Add(moverEsquerdaBtn);
             card.Controls.Add(deletarBtn);
-            card.Controls.Add(moverBtn);
-           
+            card.Controls.Add(moverDireitaBtn);
+
             card.Controls.Add(descricaoPanel);
             card.Controls.Add(dataVencimento);
             card.Controls.Add(titulo);
 
-        
             return card;
         }
+
+        private void Atualizar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ObterTarefasEAtualizarTabelas();
+        }
+
         private GraphicsPath CreateRoundedPath(Rectangle rect, int radius)
         {
             GraphicsPath path = new GraphicsPath();
@@ -504,8 +549,5 @@ namespace GerenciadorDeTarefas
                 botao.Region = new Region(ellipsePath);
             };
         }
-
-
-
     }
 }

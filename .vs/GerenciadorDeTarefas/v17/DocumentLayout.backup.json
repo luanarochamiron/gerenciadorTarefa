@@ -1,38 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\",
+  "WorkspaceRootPath": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\gerenciadordetarefas\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\gerenciadordetarefas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\gerenciadordetarefas\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\gerenciadordetarefas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\gerenciadordetarefas\\atualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\atualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\gerenciadordetarefas\\atualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\atualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|c:\\users\\pichau\\source\\repos\\gerenciador_tarefas\\gerenciadordetarefas\\cadastrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|c:\\users\\pichau\\source\\repos\\gerenciadortarefa\\gerenciadordetarefas\\cadastrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\cadastrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\gerenciadordetarefas\\cadastrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\gerenciadordetarefas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\gerenciadordetarefas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\gerenciadordetarefas\\cadastrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\cadastrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\gerenciadordetarefas\\atualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\atualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\gerenciadordetarefas\\atualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\atualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\gerenciadordetarefas\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\gerenciadordetarefas\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C564ECCE-C102-4921-B02E-9DD6B3462843}|GerenciadorDeTarefas\\GerenciadorDeTarefas.csproj|solutionrelative:gerenciadordetarefas\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,103 +50,97 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\Form1.cs",
+              "RelativeDocumentMoniker": "GerenciadorDeTarefas\\Form1.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\Form1.cs",
+              "RelativeToolTip": "GerenciadorDeTarefas\\Form1.cs",
+              "ViewState": "AgIAAL8BAAAAAAAAAAAAANUBAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:42:42.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\Form1.cs",
+              "RelativeDocumentMoniker": "GerenciadorDeTarefas\\Form1.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\Form1.cs [Design]",
+              "RelativeToolTip": "GerenciadorDeTarefas\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:41:28.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "cadastrar.cs",
-              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\cadastrar.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\cadastrar.cs",
               "RelativeDocumentMoniker": "GerenciadorDeTarefas\\cadastrar.cs",
-              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\cadastrar.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\cadastrar.cs",
               "RelativeToolTip": "GerenciadorDeTarefas\\cadastrar.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAASwEAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAnwEoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T03:51:27.832Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "cadastrar.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\cadastrar.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\cadastrar.cs",
               "RelativeDocumentMoniker": "GerenciadorDeTarefas\\cadastrar.cs",
-              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\cadastrar.cs [Design]",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\cadastrar.cs [Design]",
               "RelativeToolTip": "GerenciadorDeTarefas\\cadastrar.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T03:51:26.526Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "atualizar.cs",
-              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\atualizar.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\atualizar.cs",
               "RelativeDocumentMoniker": "GerenciadorDeTarefas\\atualizar.cs",
-              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\atualizar.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\atualizar.cs",
               "RelativeToolTip": "GerenciadorDeTarefas\\atualizar.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAqwDIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAA6wDIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T03:50:11.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T03:50:11.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "atualizar.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\atualizar.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\atualizar.cs",
               "RelativeDocumentMoniker": "GerenciadorDeTarefas\\atualizar.cs",
-              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\atualizar.cs [Design]",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\atualizar.cs [Design]",
               "RelativeToolTip": "GerenciadorDeTarefas\\atualizar.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T03:50:10.444Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-09T03:50:10.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\Form1.cs",
-              "RelativeDocumentMoniker": "GerenciadorDeTarefas\\Form1.cs",
-              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\Form1.cs",
-              "RelativeToolTip": "GerenciadorDeTarefas\\Form1.cs",
-              "ViewState": "AgIAAF0BAAAAAAAAAAAAAHsBAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T03:48:58.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "GerenciadorDeTarefas\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\Form1.Designer.cs",
               "RelativeToolTip": "GerenciadorDeTarefas\\Form1.Designer.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBMAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T03:48:54.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T03:48:54.593Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\Form1.cs",
-              "RelativeDocumentMoniker": "GerenciadorDeTarefas\\Form1.cs",
-              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\Form1.cs [Design]",
-              "RelativeToolTip": "GerenciadorDeTarefas\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T03:48:51.229Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "DAO.cs",
-              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\DAO.cs",
+              "DocumentMoniker": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\DAO.cs",
               "RelativeDocumentMoniker": "GerenciadorDeTarefas\\DAO.cs",
-              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\Gerenciador_Tarefas\\GerenciadorDeTarefas\\DAO.cs",
+              "ToolTip": "C:\\Users\\Pichau\\source\\repos\\gerenciadorTarefa\\GerenciadorDeTarefas\\DAO.cs",
               "RelativeToolTip": "GerenciadorDeTarefas\\DAO.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAvwF8AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T04:00:51.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T04:00:51.714Z"
             }
           ]
         }
