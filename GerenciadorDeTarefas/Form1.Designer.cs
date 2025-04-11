@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.relatorio = new System.Windows.Forms.Button();
+            this.legenda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Criar
@@ -118,7 +119,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label4.BackColor = System.Drawing.Color.LightBlue;
             this.label4.Font = new System.Drawing.Font("RomanD", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(27, 125);
             this.label4.Name = "label4";
@@ -130,7 +131,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.label1.Font = new System.Drawing.Font("RomanD", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(550, 125);
             this.label1.Name = "label1";
@@ -142,7 +143,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label2.BackColor = System.Drawing.Color.DodgerBlue;
             this.label2.Font = new System.Drawing.Font("RomanD", 38.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(1067, 126);
             this.label2.Name = "label2";
@@ -168,6 +169,18 @@
             this.relatorio.UseVisualStyleBackColor = false;
             this.relatorio.Click += new System.EventHandler(this.relatorio_Click);
             // 
+            // legenda
+            // 
+            this.legenda.BackColor = System.Drawing.Color.AliceBlue;
+            this.legenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.legenda.Location = new System.Drawing.Point(702, 26);
+            this.legenda.Name = "legenda";
+            this.legenda.Size = new System.Drawing.Size(43, 43);
+            this.legenda.TabIndex = 19;
+            this.legenda.Text = "?";
+            this.legenda.UseVisualStyleBackColor = false;
+            this.legenda.Click += new System.EventHandler(this.legenda_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +189,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1604, 861);
+            this.Controls.Add(this.legenda);
             this.Controls.Add(this.relatorio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -208,6 +222,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button relatorio;
+        private System.Windows.Forms.Button legenda;
     }
 }
 

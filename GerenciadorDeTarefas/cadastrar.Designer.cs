@@ -53,6 +53,7 @@
             this.Cadastro.Size = new System.Drawing.Size(871, 57);
             this.Cadastro.TabIndex = 0;
             this.Cadastro.Text = "                      Nova Tarefa                     ";
+            this.Cadastro.Click += new System.EventHandler(this.Cadastro_Click);
             // 
             // button1
             // 

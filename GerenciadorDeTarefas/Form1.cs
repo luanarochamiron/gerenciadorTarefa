@@ -24,7 +24,7 @@ namespace GerenciadorDeTarefas
 
             var tarefasAFazer = dao.ObterTarefasPorStatus("fazer").OrderBy(t => t.DataVencimento).ThenBy(t => t.Prioridade).ToList();
             var tarefasFazendo = dao.ObterTarefasPorStatus("fazendo").OrderBy(t => t.DataVencimento).ThenBy(t => t.Prioridade).ToList();
-            var tarefasFeito = dao.ObterTarefasPorStatus("feito").OrderBy(t => t.DataVencimento).ThenBy(t => t.Prioridade).ToList();
+            var tarefasFeito = dao.ObterTarefasPorStatus("finalizado").OrderBy(t => t.DataVencimento).ThenBy(t => t.Prioridade).ToList();
 
             Fazer.Controls.Clear();
             Fazendo.Controls.Clear();
@@ -49,7 +49,9 @@ namespace GerenciadorDeTarefas
             ArredondarBotao(Filtro, 45);
             ArredondarBotao(Sair, 45);
             ConfigurarBotao(Criar);
-       
+            ArredondarBotao(relatorio, 45);
+            ConfigurarBotao(relatorio);
+            DeixarBotaoRedondo(legenda);
             ConfigurarBotao(Filtro);
             ConfigurarBotaoSair(Sair);
             ArredondarLabel(label4, 30);
@@ -166,7 +168,7 @@ namespace GerenciadorDeTarefas
                     {
                         case "fazer": Fazer.Controls.Add(CriarCard(tarefa)); break;
                         case "fazendo": Fazendo.Controls.Add(CriarCard(tarefa)); break;
-                        case "feito": Finalizado.Controls.Add(CriarCard(tarefa)); break;
+                        case "finalizado": Finalizado.Controls.Add(CriarCard(tarefa)); break;
                     }
                 }
             }
@@ -271,7 +273,8 @@ namespace GerenciadorDeTarefas
                 Height = 25,
                 Dock = DockStyle.Top,
                 TextAlign = ContentAlignment.MiddleCenter,
-                ForeColor = Color.FromArgb(0, 90, 158)
+                ForeColor = Color.FromArgb(0, 90, 158),
+                AutoEllipsis = true, // adiciona "..." se o texto não couber
             };
 
             Panel descricaoPanel = new Panel
@@ -385,7 +388,7 @@ namespace GerenciadorDeTarefas
                         novoStatus = "fazendo";
                         break;
                     case "fazendo":
-                        novoStatus = "feito";
+                        novoStatus = "finalizado";
                         break;
                     // "feito" não avança mais
                     default:
@@ -420,7 +423,7 @@ namespace GerenciadorDeTarefas
                     case "fazendo":
                         novoStatus = "fazer";
                         break;
-                    case "feito":
+                    case "finalizado":
                         novoStatus = "fazendo";
                         break;
                     // "fazer" não volta mais
@@ -563,6 +566,13 @@ namespace GerenciadorDeTarefas
 
             FormRelatorio formRelatorio = new FormRelatorio(tarefas);
             formRelatorio.ShowDialog(); // ShowDialog para abrir como modal
+        }
+
+        private void legenda_Click(object sender, EventArgs e)
+        {
+            var legendas = new legendas();
+           
+            legendas.ShowDialog();
         }
     }
 }

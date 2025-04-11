@@ -13,6 +13,7 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using static iText.Bouncycastleconnector.BouncyCastleFactoryCreator;
 
 namespace GerenciadorDeTarefas
 {
@@ -55,14 +56,14 @@ namespace GerenciadorDeTarefas
 
                 switch (item.Key)
                 {
-                    case "concluída":
-                        chartStatus.Series[0].Points[ponto].Color = Color.Green;
+                    case "fazer":
+                        chartStatus.Series[0].Points[ponto].Color = Color.LightBlue;
                         break;
-                    case "em andamento":
-                        chartStatus.Series[0].Points[ponto].Color = Color.Orange;
+                    case "fazendo":
+                        chartStatus.Series[0].Points[ponto].Color = Color.DeepSkyBlue;
                         break;
-                    case "pendente":
-                        chartStatus.Series[0].Points[ponto].Color = Color.Red;
+                    case "finalizado":
+                        chartStatus.Series[0].Points[ponto].Color = Color.DodgerBlue;
                         break;
                 }
             }
@@ -80,7 +81,7 @@ namespace GerenciadorDeTarefas
                     case "alta":
                         chartPrioridade.Series[0].Points[ponto].Color = Color.Red;
                         break;
-                    case "media":
+                    case "média":
                         chartPrioridade.Series[0].Points[ponto].Color = Color.Yellow;
                         break;
                     case "baixa":
@@ -153,7 +154,7 @@ namespace GerenciadorDeTarefas
                     case "alta":
                         item.BackColor = Color.Red;
                         break;
-                    case "media":
+                    case "média":
                         item.BackColor = Color.Yellow;
                         break;
                     case "baixa":

@@ -390,3 +390,6 @@ C:\Users\nicole.famaral1\source\repos\gerenciadorTarefa\GerenciadorDeTarefas\bin
 C:\Users\nicole.famaral1\source\repos\gerenciadorTarefa\GerenciadorDeTarefas\bin\Debug\Microsoft.Extensions.Primitives.xml
 C:\Users\nicole.famaral1\source\repos\gerenciadorTarefa\GerenciadorDeTarefas\bin\Debug\Newtonsoft.Json.xml
 C:\Users\nicole.famaral1\source\repos\gerenciadorTarefa\GerenciadorDeTarefas\bin\Debug\System.ValueTuple.xml
+C:\Users\nicole.famaral1\source\repos\gerenciadorTarefa\GerenciadorDeTarefas\bin\Debug\itext.bouncy-castle-adapter.dll
+C:\Users\nicole.famaral1\source\repos\gerenciadorTarefa\GerenciadorDeTarefas\bin\Debug\itext.bouncy-castle-adapter.xml
+C:\Users\nicole.famaral1\source\repos\gerenciadorTarefa\GerenciadorDeTarefas\obj\Debug\GerenciadorDeTarefas.legendas.resources

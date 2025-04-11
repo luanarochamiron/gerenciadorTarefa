@@ -175,5 +175,10 @@ namespace GerenciadorDeTarefas
         {
 
         }
+
+        private void Cadastro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

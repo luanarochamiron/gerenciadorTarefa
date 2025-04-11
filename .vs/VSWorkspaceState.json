@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GerenciadorDeTarefas"
   ],
-  "SelectedNode": "\\GerenciadorDeTarefas.sln",
+  "SelectedNode": "\\GerenciadorDeTarefas\\cadastrar.cs",
   "PreviewInSolutionExplorer": false
 }
